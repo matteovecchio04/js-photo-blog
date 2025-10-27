@@ -6,4 +6,16 @@
 
 #polaroid {
     border-radius: 0;
+
+    img {
+        border-radius: 0;
+    }
+}
+
+main {
+    background-image: url(../assets_day1/img/cork.png);
+}
+
+header {
+    background-image: url(../assets_day1/img/wall.png);
 }
