@@ -17,10 +17,25 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
           </div>
         `).join(``)}
       </div>`;
-    }) 
     // i had to put the resetContent inside the .then because otherwise, content was not defined outside the .then
+
+    //   milestone 1 del secondo giorno, overlay
+    const cardsEl = document.querySelectorAll(".card")
+    const overlayEl = document.getElementById("overlay")
+    const imgOverEl = document.getElementById("imgOverlay")
+    const btnOverEl = document.getElementById("btnOverlay")
+
+    cardsEl.forEach(card => {
+        card.addEventListener("click", () => {
+            imgOverEl.src = card.querySelector("img").src
+            overlayEl.classList.remove("d-none")
+        })
+    });
+    // everytime I click a card, the image appears on the bottom. I have to add the function where the image actually overlays the cards and the background blacks out.
+    }) 
+    
     .catch(err => {
-        board.innerHTML = "<p>Error connecting with server</p>"
+        boardEl.innerHTML = "<p>Error connecting with server</p>"
         console.log(err);
     })
 
