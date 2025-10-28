@@ -11,6 +11,7 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
           <div class="card p-3 col-sm-12 col-md-6 col-lg-4" style="width: 18rem;">
             <img src="${polar.url}" class="card-img-top">
             <div class="card-body">
+            <p class="card-text">${polar.date}</p>
               <p class="card-text">${polar.title}</p>
             </div>
           </div>
