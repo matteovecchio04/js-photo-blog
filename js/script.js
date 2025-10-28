@@ -32,7 +32,17 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
             document.body.style.overflow = "hidden"
             // everytime I click a card, the image appears on the bottom. I have to add the function where the image actually overlays the cards and the background blacks out.
         })
-        
+
+    btnOverEl.addEventListener("click", () => {
+        overlayEl.classList.add("d-none")
+        imgOverEl.src = ""
+        document.body.style.overflow = "auto"
+        // removes the overlay image and activates scroll
+    })
+
+
+
+    
     });
     
     }) 
@@ -41,3 +51,5 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
         boardEl.innerHTML = "<p>Error connecting with server</p>"
         console.log(err);
     })
+
+    
