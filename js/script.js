@@ -29,15 +29,15 @@ axios.get("https://lanciweb.github.io/demo/api/pictures/")
         card.addEventListener("click", () => {
             imgOverEl.src = card.querySelector("img").src
             overlayEl.classList.remove("d-none")
+            document.body.style.overflow = "hidden"
+            // everytime I click a card, the image appears on the bottom. I have to add the function where the image actually overlays the cards and the background blacks out.
         })
+        
     });
-    // everytime I click a card, the image appears on the bottom. I have to add the function where the image actually overlays the cards and the background blacks out.
+    
     }) 
     
     .catch(err => {
         boardEl.innerHTML = "<p>Error connecting with server</p>"
         console.log(err);
     })
-
-
-
